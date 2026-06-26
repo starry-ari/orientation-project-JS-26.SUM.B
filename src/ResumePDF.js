@@ -101,7 +101,11 @@ function ResumePDF({ data }) {
         React.createElement(
           View,
           { style: styles.section },
-          React.createElement(Text, { style: styles.sectionTitle }, "Experience"),
+          React.createElement(
+            Text,
+            { style: styles.sectionTitle },
+            "Experience"
+          ),
           experience.map(function (exp, i) {
             return React.createElement(
               View,
@@ -109,11 +113,27 @@ function ResumePDF({ data }) {
               React.createElement(
                 View,
                 { style: styles.entryHeaderRow },
-                React.createElement(Text, { style: styles.entryTitle }, exp.role),
-                React.createElement(Text, { style: styles.entryDates }, exp.dates)
+                React.createElement(
+                  Text,
+                  { style: styles.entryTitle },
+                  exp.role
+                ),
+                React.createElement(
+                  Text,
+                  { style: styles.entryDates },
+                  exp.dates
+                )
               ),
-              React.createElement(Text, { style: styles.entrySubtitle }, exp.company),
-              React.createElement(Text, { style: styles.description }, exp.description)
+              React.createElement(
+                Text,
+                { style: styles.entrySubtitle },
+                exp.company
+              ),
+              React.createElement(
+                Text,
+                { style: styles.description },
+                exp.description
+              )
             );
           })
         ),
@@ -123,13 +143,25 @@ function ResumePDF({ data }) {
         React.createElement(
           View,
           { style: styles.section },
-          React.createElement(Text, { style: styles.sectionTitle }, "Education"),
+          React.createElement(
+            Text,
+            { style: styles.sectionTitle },
+            "Education"
+          ),
           education.map(function (edu, i) {
             return React.createElement(
               View,
               { key: i, style: styles.entry, wrap: false },
-              React.createElement(Text, { style: styles.entryTitle }, edu.institution),
-              React.createElement(Text, { style: styles.entrySubtitle }, edu.degree)
+              React.createElement(
+                Text,
+                { style: styles.entryTitle },
+                edu.institution
+              ),
+              React.createElement(
+                Text,
+                { style: styles.entrySubtitle },
+                edu.degree
+              )
             );
           })
         ),
@@ -144,7 +176,11 @@ function ResumePDF({ data }) {
             View,
             { style: styles.skillsRow },
             skills.map(function (skill, i) {
-              return React.createElement(Text, { key: i, style: styles.skillChip }, skill);
+              return React.createElement(
+                Text,
+                { key: i, style: styles.skillChip },
+                skill
+              );
             })
           )
         )

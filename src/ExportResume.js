@@ -1,12 +1,11 @@
-
 //Export Resume to PDF button.
-
 
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import ResumePDF from "./ResumePDF";
 
 function ExportResume({ resumeData }) {
-  var fileName = (resumeData.name || "resume").replace(/\s+/g, "_") + "_Resume.pdf";
+  var fileName =
+    (resumeData.name || "resume").replace(/\s+/g, "_") + "_Resume.pdf";
 
   return React.createElement(
     PDFDownloadLink,
