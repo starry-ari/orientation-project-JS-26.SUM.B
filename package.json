@@ -44,11 +44,5 @@
     "eslint-config-prettier": "^8.8.0",
     "prettier": "2.8.8",
     "web-vitals": "^5.3.0"
-  },
- 
-  "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/.+\\.(js|jsx)$/(?!(@react-pdf|@testing-library))"
-    ]
   }
 }

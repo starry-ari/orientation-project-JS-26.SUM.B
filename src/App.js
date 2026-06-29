@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import ExportResume from "./ExportResume";
 import BuildPDF from "./BuildPDF";
-import PhotoUpload from "./PhotoUpload";
+import LogoUpload from "./LogoUpload";
 
 function App() {
   const [details, setDetails] = useState({ name: "", email: "" });
   const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [photo, setPhoto] = useState(null); 
+  const [Logo, setLogo] = useState(null); 
 
   const addExperience = () => {
     setExperience((prev) => [
@@ -26,13 +26,13 @@ function App() {
     setSkills((prev) => [...prev, ""]);
   };
 
-  const resumeData = BuildPDF({ details, experience, education, skills, photo });
+  const resumeData = BuildPDF({ details, experience, education, skills, Logo });
 
   return (
     <div className="App">
       <h1>Resume Builder</h1>
 
-      <PhotoUpload onPhotoChange={setPhoto} />
+      <LogoUpload onLogoChange={setLogo} />
 
       <div className="resumeSection">
         <h2>Experience</h2>

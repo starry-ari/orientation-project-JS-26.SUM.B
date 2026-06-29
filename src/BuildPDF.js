@@ -1,4 +1,4 @@
-function BuildPDF({ details, experience, education, skills, photo }) {
+function BuildPDF({ details, experience, education, skills, logo }) {
   return {
     name: details.name,
     email: details.email,
