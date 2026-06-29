@@ -1,4 +1,10 @@
 {
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@react-pdf|@react-pdf/renderer|@react-pdf/primitives|@react-pdf/font|@react-pdf/layout|@react-pdf/pdfkit|@react-pdf/png-js|@react-pdf/textkit|@react-pdf/yoga)/)"
+    ]
+  },
+
   "name": "orientation-project-js",
   "version": "0.1.0",
   "private": true,
@@ -45,4 +51,6 @@
     "prettier": "2.8.8",
     "web-vitals": "^5.3.0"
   }
+
+  
 }
