@@ -2,7 +2,7 @@ function BuildPDF({ details, experience, education, skills, photo }) {
   return {
     name: details.name,
     email: details.email,
-    logo: logo, 
+    logo: logo,
     experience: experience.map((exp) => ({
       company: exp.company,
       role: exp.role,

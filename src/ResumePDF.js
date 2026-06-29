@@ -1,8 +1,13 @@
-import { Document, Page, Text, View, Image, StyleSheet } from "@react-pdf/renderer";
-
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  Image,
+  StyleSheet,
+} from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
-
   headerRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -19,7 +24,14 @@ const styles = StyleSheet.create({
 });
 
 function ResumePDF({ data }) {
-  const { name, email, logo, experience = [], education = [], skills = [] } = data;
+  const {
+    name,
+    email,
+    logo,
+    experience = [],
+    education = [],
+    skills = [],
+  } = data;
 
   return (
     <Document title={`${name} - Resume`} author={name}>

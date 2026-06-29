@@ -11,7 +11,6 @@ function LogoUpload({ onLogoChange }) {
 
       const reader = new FileReader();
       reader.onload = () => {
-     
         setPreview(reader.result);
         onLogoChange(reader.result);
       };

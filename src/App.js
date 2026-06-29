@@ -26,7 +26,13 @@ function App() {
     setSkills((prev) => [...prev, ""]);
   };
 
-  const resumeData = BuildPDF({ details, experience, education, skills, photo });
+  const resumeData = BuildPDF({
+    details,
+    experience,
+    education,
+    skills,
+    photo,
+  });
 
   return (
     <div className="App">
