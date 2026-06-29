@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import ExportResume from "./ExportResume";
 import BuildPDF from "./BuildPDF";
-import LogoUpload from "./LogoUpload";
+import PhotoUpload from "./PhotoUpload";
 
 function App() {
   const [details, setDetails] = useState({ name: "", email: "" });
   const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [photo, setPhoto] = useState(null); // base64 data URL or null
+  const [photo, setPhoto] = useState(null); 
 
   const addExperience = () => {
     setExperience((prev) => [
@@ -26,13 +26,7 @@ function App() {
     setSkills((prev) => [...prev, ""]);
   };
 
-  const resumeData = BuildPDF({
-    details,
-    experience,
-    education,
-    skills,
-    photo,
-  });
+  const resumeData = BuildPDF({ details, experience, education, skills, photo });
 
   return (
     <div className="App">
